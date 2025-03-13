@@ -1,0 +1,5 @@
+## JAVA MICRO EDITION ##
+-------------------------------------------------------------------------------
+ROM files extensions accepted: ".jar"
+-------------------------------------------------------------------------------
+Extensions des fichiers ROMs permises: ".jar"

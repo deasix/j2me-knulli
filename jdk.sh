@@ -16,12 +16,12 @@ trap 'echo "Error occurred. See logs: $F_LOG"; exit 1' ERR
 D_TMP="$(mktemp -d)"
 
 # optional parameters
-OUTPUT=${1:-"min-jdk.tar.gz"}
+OUTPUT="${1:-"min-jdk.tar.gz"}"
 INPUT="${2:-"jdk.tar.gz"}"
 
 # strings
 JDK_VER="zulu11.48.21-ca-jdk11.0.11-linux_aarch64.tar.gz"
-JDK_URL="https://cdn.azul.com/zulu-embedded/bin/${JDK_VER}"
+JDK_URL="https://cdn.azul.com/zulu-embedded/bin/$JDK_VER"
 
 # find or download jdk 
 echo "Searching jdk file..."
@@ -30,7 +30,7 @@ if [ ! -f "$INPUT" ]; then
    
    if ! ping -c 1 -W 1 8.8.8.8 > /dev/null 2>&1; then
       echo "No internet connection."
-      echo "Place JDK at $(readlink -f $INPUT)."
+      echo "Place JDK at $(readlink -f "$INPUT")."
       exit 1 # consider cleanup
    fi
    

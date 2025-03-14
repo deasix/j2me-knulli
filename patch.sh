@@ -111,7 +111,7 @@ fi
 # persist
 if [[ "${SAVE:-false}" == "true" ]]; then
    echo "Persisting changes..."
-   batocera-save-overlay $SIZE
+   batocera-save-overlay "$SIZE"
 fi
 
 # reboot

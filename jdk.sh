@@ -13,7 +13,7 @@ exec > >(tee -a "$F_LOG") 2> >(tee -a "$F_LOG" >&2)
 trap 'echo "Error occurred. See logs: $F_LOG"; exit 1' ERR
 
 # system
-D_TMP=$(mktemp -d)
+D_TMP="$(mktemp -d)"
 
 # optional parameters
 OUTPUT=${1:-"min-jdk.tar.gz"}

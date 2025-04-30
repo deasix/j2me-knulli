@@ -19,7 +19,7 @@ trap 'echo "Error occurred. See logs: $log"; exit 1' ERR
 delete="true" 
 reboot="true"
 save="true"
-size="256"
+size="384"
 
 # system
 r="${1:-""}"
